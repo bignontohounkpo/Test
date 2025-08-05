@@ -1,4 +1,302 @@
 /* Hero Section Styling */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .service-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .service-card:hover {
+    background-color: #f59e0b !important;
+    transform: translateY(-5px);
+  }
+  
+  .service-card:hover h3,
+  .service-card:hover p {
+    color: white !important;
+  }
+  
+  .plus-icon {
+    background-color: #f3f4f6;
+    border-radius: 20%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover .plus-icon {
+    background-color: white !important;
+  }
+  
+  /* La couleur de l'image de la flèche ne change plus au survol */
+  .plus-icon img {
+    filter: none !important;
+  }
+
+
+    
+    .pricing-toggle {
+        background-color: #e9ecef;
+        border-radius: 25px;
+        padding: 4px;
+        display: inline-flex;
+    }
+    
+    .pricing-toggle .btn {
+        border-radius: 20px;
+        border: none;
+        padding: 8px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .pricing-toggle .btn.active {
+        background-color: #ff6b35;
+    }
+    
+    .pricing-toggle .btn:not(.active) {
+        background-color: transparent;
+        color: #6c757d;
+    }
+    
+    .pricing-card {
+        background: white;
+        border-radius: 20px;
+        border: 1px solid #e9ecef;
+        transition: transform 0.3s ease;
+    
+        overflow: hidden;
+    }
+    
+    
+    .price-amount {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #212529;
+        line-height: 1;
+    }
+    
+    .price-period {
+        font-size: 1rem;
+        color: #6c757d;
+        font-weight: 400;
+    }
+    
+    .card-body-custom {
+        padding: 30px;
+    }
+    
+    .features-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #212529;
+        margin-bottom: 25px;
+    }
+    
+    .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+    }
+    
+    .feature-item {
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 14px;
+        color: #495057;
+    }
+    
+    .feature-item:last-child {
+        border-bottom: none;
+    }
+    
+    .feature-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+    
+    .feature-icon img {
+        width: 12px;
+        height: 12px;
+        object-fit: contain;
+    }
+    
+    .feature-icon.successe {
+        background-color: #f8e0e2;
+    }
+    
+    .feature-icon.successes {
+        background-color: #ffffff;
+    }
+    
+    .btn-get-started {
+        background-color: #ff6b35;
+        border: none;
+        border-radius: 10px;
+        padding: 15px 0;
+        font-weight: 600;
+        color: white;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        text-transform: none;
+    }
+    
+    .btn-get-started:hover {
+        background-color: #e55a2e;
+        color: white;
+        transform: translateY(-1px);
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #212529;
+        margin-bottom: 16px;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+        color: #6c757d;
+        line-height: 1.6;
+        max-width: 600px;
+    }
+    
+    .faq-section {
+        background-color: #f8f9fa;
+        padding: 80px 0;
+    }
+    
+    .faq-header {
+        max-width: 400px;
+    }
+    
+    .faq-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #212529;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    
+    .faq-description {
+        font-size: 1rem;
+        color: #6c757d;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+    
+    .support-link {
+        color: #212529;
+        text-decoration: underline;
+        font-weight: 500;
+    }
+    
+    .support-link:hover {
+        color: #ff6b35;
+    }
+    
+    .see-all-btn {
+        background-color: #f8f9fa;
+        border: 2px solid #dee2e6;
+        border-radius: 8px;
+        padding: 12px 24px;
+        color: #212529;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    
+    .see-all-btn:hover {
+        background-color: #e9ecef;
+        color: #212529;
+        border-color: #ced4da;
+    }
+    
+    .faq-content {
+        max-width: 600px;
+    }
+    
+    .faq-item {
+        background: white;
+        border: 1px solid #e9ecef;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        transition: all 0.3s ease;
+    }
+    
+    .faq-item:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    
+    .faq-question {
+        padding: 20px 24px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #212529;
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+    }
+    
+
+    
+    .faq-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 25%;
+        background-color: #f7d0bc;
+        color: #ff6b35;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+        margin-left: 16px;
+    }
+    
+    .faq-answer {
+        padding: 0 24px 20px;
+        color: #6c757d;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        display: none;
+    }
+    
+    .faq-item.active .faq-answer {
+        display: block;
+        animation: slideDown 0.3s ease;
+    }
+    
+    .faq-item.active .faq-icon {
+        background-color: #f7d0bc;
+        color: white;
+        transform: rotate(45deg);
+    }
+    
 .py-md-6 {
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
@@ -63,6 +361,7 @@ h1 {
 .py-md-5 {
     padding-top: 4rem !important;
     padding-bottom: 4rem !important;
+    border-right: #6B7280;
 }
 
 .logo-item {

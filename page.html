@@ -12,305 +12,7 @@
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
-    <style>
-      /* Styles pour les cartes de services */
-      .service-card {
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-      
-      .service-card:hover {
-        background-color: #f59e0b !important;
-        transform: translateY(-5px);
-      }
-      
-      .service-card:hover h3,
-      .service-card:hover p {
-        color: white !important;
-      }
-      
-      .plus-icon {
-        background-color: #f3f4f6;
-        border-radius: 20%;
-        width: 40px;
-        height: 40px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: auto;
-        transition: all 0.3s ease;
-      }
-      
-      .service-card:hover .plus-icon {
-        background-color: white !important;
-      }
-      
-      /* La couleur de l'image de la flèche ne change plus au survol */
-      .plus-icon img {
-        filter: none !important;
-      }
 
-
-        
-        .pricing-toggle {
-            background-color: #e9ecef;
-            border-radius: 25px;
-            padding: 4px;
-            display: inline-flex;
-        }
-        
-        .pricing-toggle .btn {
-            border-radius: 20px;
-            border: none;
-            padding: 8px 20px;
-            font-size: 14px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .pricing-toggle .btn.active {
-            background-color: #ff6b35;
-        }
-        
-        .pricing-toggle .btn:not(.active) {
-            background-color: transparent;
-            color: #6c757d;
-        }
-        
-        .pricing-card {
-            background: white;
-            border-radius: 20px;
-            border: 1px solid #e9ecef;
-            transition: transform 0.3s ease;
-        
-            overflow: hidden;
-        }
-        
-        
-        .price-amount {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #212529;
-            line-height: 1;
-        }
-        
-        .price-period {
-            font-size: 1rem;
-            color: #6c757d;
-            font-weight: 400;
-        }
-        
-        .card-body-custom {
-            padding: 30px;
-        }
-        
-        .features-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #212529;
-            margin-bottom: 25px;
-        }
-        
-        .features-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 30px 0;
-        }
-        
-        .feature-item {
-            display: flex;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid #f0f0f0;
-            font-size: 14px;
-            color: #495057;
-        }
-        
-        .feature-item:last-child {
-            border-bottom: none;
-        }
-        
-        .feature-icon {
-            width: 20px;
-            height: 20px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-        
-        .feature-icon img {
-            width: 12px;
-            height: 12px;
-            object-fit: contain;
-        }
-        
-        .feature-icon.success {
-            background-color: #f8e0e2;
-        }
-        
-        .feature-icon.danger {
-            background-color: #ffffff;
-        }
-        
-        .btn-get-started {
-            background-color: #ff6b35;
-            border: none;
-            border-radius: 10px;
-            padding: 15px 0;
-            font-weight: 600;
-            color: white;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            text-transform: none;
-        }
-        
-        .btn-get-started:hover {
-            background-color: #e55a2e;
-            color: white;
-            transform: translateY(-1px);
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #212529;
-            margin-bottom: 16px;
-        }
-        
-        .section-description {
-            font-size: 1rem;
-            color: #6c757d;
-            line-height: 1.6;
-            max-width: 600px;
-        }
-        
-        .faq-section {
-            background-color: #f8f9fa;
-            padding: 80px 0;
-        }
-        
-        .faq-header {
-            max-width: 400px;
-        }
-        
-        .faq-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #212529;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-        
-        .faq-description {
-            font-size: 1rem;
-            color: #6c757d;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        
-        .support-link {
-            color: #212529;
-            text-decoration: underline;
-            font-weight: 500;
-        }
-        
-        .support-link:hover {
-            color: #ff6b35;
-        }
-        
-        .see-all-btn {
-            background-color: #f8f9fa;
-            border: 2px solid #dee2e6;
-            border-radius: 8px;
-            padding: 12px 24px;
-            color: #212529;
-            font-weight: 500;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-        
-        .see-all-btn:hover {
-            background-color: #e9ecef;
-            color: #212529;
-            border-color: #ced4da;
-        }
-        
-        .faq-content {
-            max-width: 600px;
-        }
-        
-        .faq-item {
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            transition: all 0.3s ease;
-        }
-        
-        .faq-item:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-        
-        .faq-question {
-            padding: 20px 24px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #212529;
-            background: none;
-            border: none;
-            width: 100%;
-            text-align: left;
-        }
-        
-        .faq-question:hover {
-            color: #ff6b35;
-        }
-        
-        .faq-icon {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background-color: #fff5f0;
-            color: #ff6b35;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            flex-shrink: 0;
-            margin-left: 16px;
-        }
-        
-        .faq-answer {
-            padding: 0 24px 20px;
-            color: #6c757d;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            display: none;
-        }
-        
-        .faq-item.active .faq-answer {
-            display: block;
-            animation: slideDown 0.3s ease;
-        }
-        
-        .faq-item.active .faq-icon {
-            background-color: #ff6b35;
-            color: white;
-            transform: rotate(45deg);
-        }
-        
-
-    </style>
   </head>
   <body>
     <main class="bg-light">
@@ -378,7 +80,7 @@
                 <div class="d-flex align-items-center">
                     <div class="d-flex gap-5 animate-scroll-rtl">
                         <img src="/assets/images/amazon.svg" alt="Amazon" class="img-fluid" style="height: 40px; width: auto; opacity: 0.7;">
-                        <img src="/assets/images/dribble.svg" alt="Dribbble" class="img-fluid" style="height: 40px; width: auto; opacity: 0.7;">
+                        <img src="/assets/images/dribble.svg" alt="Dribbble" class="img-fluid " style="height: 40px; width: auto; opacity: 0.7;">
                         <img src="/assets/images/hubspot.svg" alt="Hubspot" class="img-fluid" style="height: 40px; width: auto; opacity: 0.7;">
                         <img src="/assets/images/notion.svg" alt="Notion" class="img-fluid" style="height: 40px; width: auto; opacity: 0.7;">
                         <img src="/assets/images/netflix.svg" alt="Netflix" class="img-fluid" style="height: 40px; width: auto; opacity: 0.7;">
@@ -401,7 +103,7 @@
           <!-- Services Section -->
           <section class="py-5">
             <div class="container">
-              <div class="d-flex justify-content-between">
+              <div class="d-flex flex-wrap justify-content-between">
                 <div class="">
               <h2 class="fw-bold">Benefits</h2>
               <p class="text-black">
@@ -501,7 +203,7 @@
           <!-- Cours Section -->
           <section class="py-5">
             <div class="">
-              <div class="d-flex justify-content-between">
+              <div class="d-flex flex-wrap justify-content-between">
                 <div class="">
               <h2 class="fw-bold">Our Courses</h2>
               <p class="text-black">
@@ -570,7 +272,7 @@
                     </div>
                   </div>
                 </div>
-                <div class=" col-lg-6 col-md-5 col-sm-7 bg-white p-4">
+                <div class=" col-lg-6 col-md-6 col-sm-12 bg-white p-4">
                   <div class="card h-100 border-0  overflow-hidden">
                       <img src="/assets/images/Image (3).svg" class="card-img-top" alt="Développement Web">
                       <div class="d-flex justify-content-between pt-1">
@@ -630,7 +332,7 @@
 <!-- Section Témoignages -->
           <section class="py-5">
   <div class="container">
-    <div class="d-flex justify-content-between flex-wrap align-items-center mb-4">
+    <div class="d-flex flex-wrap justify-content-between  mb-4">
       <div>
         <h2 class="fw-bold">Our Testimonials</h2>
         <p class="text-black">
@@ -638,7 +340,7 @@
           Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.
         </p>
       </div>
-      <button class="btn btn-outline-secondary mt-3 mt-lg-0">View All</button>
+      <button class="btn btn-white"> View All </button>
     </div>
 
     <div class="row g-4">
@@ -767,44 +469,44 @@
                             <div class="card-body-custom bg-white">
                                 <h6 class="features-title">Available Features</h6>
                                 <ul class="features-list">
-                                    <li class="feature-item">
-                                        <div class="feature-icon success">
+                                    <li class="feature-item ">
+                                        <div class="feature-icon text-black successe">  
                                             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDNMNC41IDguNUwyIDYiIHN0cm9rZT0iIzI4YTc0NSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Check">
                                         </div>
                                         Access to selected free courses.
                                     </li>
                                     <li class="feature-item">
-                                        <div class="feature-icon success">
+                                        <div class="feature-icon text-black successe">
                                             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDNMNC41IDguNUwyIDYiIHN0cm9rZT0iIzI4YTc0NSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Check">
                                         </div>
                                         Limited course materials and resources.
                                     </li>
                                     <li class="feature-item">
-                                        <div class="feature-icon success">
-                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDNMNC41IDguNUwyIDYiIHN0cm9rZT0iIzI4YTc0NSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Check">
+                                        <div class="feature-icon text-black successe">
+                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDNMNC41IDguNUwyIDYiIHN0cm9rZT0iIzI4YTc0NSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Check" class="text-black">
                                         </div>
                                         Basic community support.
                                     </li>
                                     <li class="feature-item">
-                                        <div class="feature-icon danger">
+                                        <div class="feature-icon text-black successes">
                                             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0ibTMgM2w2IDZtMC02TDMgOSIgc3Ryb2tlPSIjZGMzNTQ1IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4=" alt="Cross">
                                         </div>
                                         No certificates upon completion.
                                     </li>
                                     <li class="feature-item">
-                                        <div class="feature-icon success">
+                                        <div class="feature-icon text-black successe">
                                             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDNMNC41IDguNUwyIDYiIHN0cm9rZT0iIzI4YTc0NSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Check">
                                         </div>
                                         Ad - supported platform.
                                     </li>
                                     <li class="feature-item">
-                                        <div class="feature-icon danger">
+                                        <div class="feature-icon text-black successes">
                                             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0ibTMgM2w2IDZtMC02TDMgOSIgc3Ryb2tlPSIjZGMzNTQ1IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4=" alt="Cross">
                                         </div>
                                         Access to exclusive Pro Plan community forums.
                                     </li>
                                     <li class="feature-item">
-                                        <div class="feature-icon danger">
+                                        <div class="feature-icon text-black successes">
                                             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0ibTMgM2w2IDZtMC02TDMgOSIgc3Ryb2tlPSIjZGMzNTQ1IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4=" alt="Cross">
                                         </div>
                                         Early access to new courses and updates.
@@ -835,37 +537,37 @@
                                         Unlimited access to all courses.
                                     </li>
                                     <li class="feature-item">
-                                        <div class="feature-icon success">
+                                        <div class="feature-icon text-black successe">
                                             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDNMNC41IDguNUwyIDYiIHN0cm9rZT0iIzI4YTc0NSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Check">
                                         </div>
                                         Unlimited course materials and resources.
                                     </li>
                                     <li class="feature-item">
-                                        <div class="feature-icon success">
+                                        <div class="feature-icon text-black successe">
                                             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDNMNC41IDguNUwyIDYiIHN0cm9rZT0iIzI4YTc0NSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Check">
                                         </div>
                                         Priority support from instructors.
                                     </li>
                                     <li class="feature-item">
-                                        <div class="feature-icon success">
+                                        <div class="feature-icon text-black successe">
                                             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDNMNC41IDguNUwyIDYiIHN0cm9rZT0iIzI4YTc0NSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Check">
                                         </div>
                                         Course completion certificates.
                                     </li>
                                     <li class="feature-item">
-                                        <div class="feature-icon success">
+                                        <div class="feature-icon text-black successe">
                                             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDNMNC41IDguNUwyIDYiIHN0cm9rZT0iIzI4YTc0NSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Check">
                                         </div>
                                         Ad - free experience.
                                     </li>
                                     <li class="feature-item">
-                                        <div class="feature-icon success">
+                                        <div class="feature-icon text-black successe">
                                             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDNMNC41IDguNUwyIDYiIHN0cm9rZT0iIzI4YTc0NSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Check">
                                         </div>
                                         Access to exclusive Pro Plan community forums.
                                     </li>
                                     <li class="feature-item">
-                                        <div class="feature-icon success">
+                                        <div class="feature-icon text-black successe">
                                             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDNMNC41IDguNUwyIDYiIHN0cm9rZT0iIzI4YTc0NSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Check">
                                         </div>
                                         Early access to new courses and updates.
@@ -881,8 +583,8 @@
 
         
         <section class="faq-section  py-5">
-          <div class="container bg-white rounded-3 ">
-              <div class="row  justify-content-center p-4">
+          <div class="container ">
+              <div class="row bg-white justify-content-center p-5 rounded-3">
                   <!-- Left Column - Header -->
                   <div class="col-lg-5">
                       <div class="faq-header">
@@ -898,54 +600,67 @@
                   <!-- Right Column - FAQ Items -->
                   <div class="col-lg-6">
                       <div class="faq-content">
-                          
+                          <!-- Special FAQ Item (Open by default) -->
+
+
                           
                           <!-- Regular FAQ Items -->
                           <div class="faq-item" onclick="toggleFaq(this)">
-                              <button class="faq-question">
+                            <button class="faq-question border-top border-1 border-light">
+                              Can I enroll in multiple courses at once?
+                                <div class="faq-icon text-black">
+                                    <i class="fas fa-plus">+</i>
+                                </div>
+                            </button>
+                            <div class="faq-answer border-top border-1 border-light ">
+                             <p class="pt-1"> Absolutely! You can enroll in multiple courses simultaneously and access them at your convenience.  </p> 
+                            </div>
+                        </div>
+                          <div class="faq-item" onclick="toggleFaq(this)">
+                              <button class="faq-question border-bottom border-1 border-light">
                                   What kind of support can I expect from instructors?
-                                  <div class="faq-icon">
-                                      <i class="fas fa-plus"></i>
+                                  <div class="faq-icon text-black">
+                                      <i class="fas fa-plus">+</i>
                                   </div>
                               </button>
                               <div class="faq-answer">
-                                  Our instructors provide comprehensive support through discussion forums, office hours, and personalized feedback on assignments. You can expect timely responses to your questions and guidance throughout your learning journey.
+                                <p class="pt-1">  Our instructors provide comprehensive support through discussion forums, office hours, and personalized feedback on assignments. You can expect timely responses to your questions and guidance throughout your learning journey. </p>
                               </div>
                           </div>
                           
                           <div class="faq-item" onclick="toggleFaq(this)">
-                              <button class="faq-question">
-                                  Are the courses self-paced or do they have specific start and end dates?
-                                  <div class="faq-icon">
-                                      <i class="fas fa-plus"></i>
+                              <button class="faq-question  border-bottom border-1 border-light">
+                                 Are the courses self-paced or do they have specific start and end dates?
+                                  <div class="faq-icon text-black">
+                                      <i class="fas fa-plus ">+</i>
                                   </div>
                               </button>
                               <div class="faq-answer">
-                                  Most of our courses are self-paced, allowing you to learn at your own speed. However, some specialized courses may have specific start dates and deadlines to ensure optimal learning outcomes and peer interaction.
+                                <p class="pt-1"> Most of our courses are self-paced, allowing you to learn at your own speed. However, some specialized courses may have specific start dates and deadlines to ensure optimal learning outcomes and peer interaction. </p>
                               </div>
                           </div>
                           
                           <div class="faq-item" onclick="toggleFaq(this)">
-                              <button class="faq-question">
+                              <button class="faq-question  border-bottom border-1 border-light">
                                   Are there any prerequisites for the courses?
-                                  <div class="faq-icon">
-                                      <i class="fas fa-plus"></i>
+                                  <div class="faq-icon text-black">
+                                      <i class="fas fa-plus">+</i>
                                   </div>
                               </button>
                               <div class="faq-answer">
-                                  Prerequisites vary by course. Beginner courses typically have no requirements, while advanced courses may require prior knowledge or completion of foundational courses. Check the course description for specific requirements.
+                                 <p class="pt-1"> Prerequisites vary by course. Beginner courses typically have no requirements, while advanced courses may require prior knowledge or completion of foundational courses. Check the course description for specific requirements.</p>
                               </div>
                           </div>
                           
                           <div class="faq-item" onclick="toggleFaq(this)">
-                              <button class="faq-question">
+                              <button class="faq-question border-bottom border-1 border-light">
                                   Can I download the course materials for offline access?
-                                  <div class="faq-icon">
-                                      <i class="fas fa-plus"></i>
+                                  <div class="faq-icon text-black">
+                                      <i class="fas fa-plus">+</i>
                                   </div>
                               </button>
                               <div class="faq-answer">
-                                  Yes! With our Pro Plan, you can download course materials, videos, and resources for offline access. This feature allows you to continue learning even without an internet connection.
+                                  <p class="pt-1"> Yes! With our Pro Plan, you can download course materials, videos, and resources for offline access. This feature allows you to continue learning even without an internet connection. </p>
                               </div>
                           </div>
                       </div>
@@ -961,110 +676,61 @@
     </div>
     <footer class="bg-white py-5 border-top">
       <div class="container">
-        <div class="row g-4">
-          <!-- Logo et description -->
+        <div class="row  justify-content-between">
+          <!-- Logo et description à gauche -->
           <div class="col-lg-3 col-md-6">
+            <ul class="list-unstyled">
             <img src="/assets/images/logo.svg" alt="Logo" class="mb-3" style="height: 32px;">
-            <p class="text-muted mb-4">ClearLink is your gateway to effortless, high-quality video conferencing. Join us in shaping the future of communication!</p>
-            <div class="d-flex gap-3">
-              <a href="#" class="text-dark"><i class="fab fa-linkedin fa-lg"></i></a>
-              <a href="#" class="text-dark"><i class="fab fa-twitter fa-lg"></i></a>
-              <a href="#" class="text-dark"><i class="fab fa-facebook fa-lg"></i></a>
-              <a href="#" class="text-dark"><i class="fab fa-instagram fa-lg"></i></a>
-              <a href="#" class="text-dark"><i class="fab fa-github fa-lg"></i></a>
-            </div>
+            <li> <a href="#" class="text-dark" style="text-decoration: none;">  <img src="/assets/images/Icon (2).svg" alt=""  style="width: 15px; height: 15px; text-decoration: none;">  hello@skillbridge.com</a></li>
+            <li><a href="#" class="text-dark" style="text-decoration: none;">  <img src="/assets/images/Icon (3).svg" alt=""  style="width: 15px; height: 15px; text-decoration: none;">  +91 91813 23 2309</a> </li> 
+            <li></li><a href="#" class="text-dark" style="text-decoration: none;">  <img src="/assets/images/Subtract.svg" alt=""  style="width: 15px; height: 15px; text-decoration: none;">  +91 91813 23 2309</a> </li> 
+          </ul>
           </div>
-          
-          <!-- Product -->
-          <div class="col-6 col-md-3 col-lg-2">
-            <h6 class="fw-semibold mb-3">Product</h6>
-            <ul class="list-unstyled">
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Overview</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Features</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Solutions</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tutorials</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Pricing</a></li>
-            </ul>
-          </div>
-          
-          <!-- Company -->
-          <div class="col-6 col-md-3 col-lg-2">
-            <h6 class="fw-semibold mb-3">Company</h6>
-            <ul class="list-unstyled">
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">About us</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Careers</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">News</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Press</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Contact</a></li>
-            </ul>
-          </div>
-          
-          <!-- Resources -->
-          <div class="col-6 col-md-3 col-lg-2">
-            <h6 class="fw-semibold mb-3">Resources</h6>
-            <ul class="list-unstyled">
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Blog</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Newsletter</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Events</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Help center</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tutorials</a></li>
-            </ul>
-          </div>
-          
-          <!-- Legal -->
-          <div class="col-6 col-md-3 col-lg-2">
-            <h6 class="fw-semibold mb-3">Legal</h6>
-            <ul class="list-unstyled">
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Terms</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Privacy</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Cookies</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Licenses</a></li>
-              <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Contact</a></li>
-            </ul>
-          </div>
-          
-          <!-- Get the app -->
-          <div class="col-12 col-lg-3">
-            <h6 class="fw-semibold mb-3">Get the app</h6>
-            <div class="d-flex flex-column gap-2">
-              <a href="#" class="btn btn-outline-dark btn-sm text-start px-3 py-2">
-                <div class="d-flex align-items-center">
-                  <i class="fab fa-apple fs-4 me-2"></i>
-                  <div>
-                    <div class="small">Download on the</div>
-                    <div class="fw-semibold">App Store</div>
-                  </div>
+    
+          <!-- Regrouper les 3 sections alignées à droite -->
+          <div class="col-lg-5">
+            <div class="row justify-content-between">
+              <!-- Product -->
+              <div class="col-md-4  sm-6">
+                <h6 class="fw-bold mb-3">Home</h6>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><a href="#" class="text-black text-decoration-none  fs-6">Benefits</a></li>
+                  <li class="mb-2"><a href="#" class="text-black text-decoration-none  fs-6">Our Courses</a></li>
+                  <li class="mb-2"><a href="#" class="text-black text-decoration-none  fs-6">Our Testimonials</a></li>
+                  <li class="mb-2"><a href="#" class="text-black text-decoration-none  fs-6">Our FAQ</a></li>
+                </ul>
+              </div>
+    
+              <!-- Company -->
+              <div class="col-md-4 sm-6">
+                <h6 class="fw-bold mb-3">About Us</h6>
+                <ul class="list-unstyled fs-5">
+                  <li class="mb-2"><a href="#" class=" text-black text-decoration-none  fs-6">Company</a></li>
+                  <li class="mb-2"><a href="#" class="  text-black text-decoration-none  fs-6">Achievements</a></li>
+                  <li class="mb-2"><a href="#" class=" text-black text-decoration-none  fs-6">Our Goals</a></li>
+                </ul>
+              </div>
+    
+              <!-- Resources -->
+              <div class="col-md-4 sm-6">
+                <h6 class="fw-bold mb-3">Social Profiles</h6>
+                <div class="d-flex gap-3">
+                  <img src="/assets/images/Vector (1).svg" alt=" facebook" class="img-fluid">
+                  <img src="/assets/images/Vector (2).svg" alt=""class="img-fluid">
+                  <img src="/assets/images/Vector (3).svg" alt="" class="img-fluid">
                 </div>
-              </a>
-              <a href="#" class="btn btn-outline-dark btn-sm text-start px-3 py-2">
-                <div class="d-flex align-items-center">
-                  <i class="fab fa-google-play fs-4 me-2"></i>
-                  <div>
-                    <div class="small">Get it on</div>
-                    <div class="fw-semibold">Google Play</div>
-                  </div>
-                </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
-        
+    
         <hr class="my-4">
-        
-        <div class="d-flex flex-wrap justify-content-between align-items-center">
-          <div class="text-muted small">
-            &copy; 2024 ClearLink. All rights reserved.
+          <div class="text-black small text-center">
+            &copy;2023 Skillbridge. All rights reserved.
           </div>
-          <div class="d-flex gap-3">
-            <a href="#" class="text-muted"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="text-muted"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-muted"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="text-muted"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-muted"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
       </div>
     </footer>
+    
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
