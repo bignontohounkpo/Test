@@ -3,14 +3,29 @@
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
 }
+.nav-link:hover{
+    background-color: #F1F1F3;
+    border-radius: 6px;
 
+}
+
+.b{
+    border-right: solid 1px;
+    border-color: #f3f4f6;
+    margin-left: 30px;
+}
+.yel{
+
+    background-color: #FF9500;
+    text-emphasis-color: #ffff;
+}
   .service-card {
     transition: all 0.3s ease;
     cursor: pointer;
   }
   
   .service-card:hover {
-    background-color: #f59e0b !important;
+    background-color: #FF9500!important;
     transform: translateY(-5px);
   }
   
@@ -43,14 +58,15 @@ body {
 
     
     .pricing-toggle {
-        background-color: #e9ecef;
-        border-radius: 25px;
-        padding: 4px;
+        color: white;
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 7px;
         display: inline-flex;
     }
     
     .pricing-toggle .btn {
-        border-radius: 20px;
+        border-radius: 10px;
         border: none;
         padding: 8px 20px;
         font-size: 14px;
@@ -59,7 +75,7 @@ body {
     }
     
     .pricing-toggle .btn.active {
-        background-color: #ff6b35;
+        background-color: #FF9500;
     }
     
     .pricing-toggle .btn:not(.active) {
@@ -110,8 +126,10 @@ body {
     .feature-item {
         display: flex;
         align-items: center;
-        padding: 12px 0;
-        border-bottom: 1px solid #f0f0f0;
+        padding: 11px 0;
+        margin-bottom: 10px;
+        border: 1px solid #f0f0f0;
+        border-radius: 10px;
         font-size: 14px;
         color: #495057;
     }
@@ -121,6 +139,7 @@ body {
     }
     
     .feature-icon {
+
         width: 20px;
         height: 20px;
         border-radius: 4px;
@@ -138,15 +157,18 @@ body {
     }
     
     .feature-icon.successe {
-        background-color: #f8e0e2;
+        background-color: #FFF4E5;
+        margin-left: 10px;
     }
     
     .feature-icon.successes {
         background-color: #ffffff;
+        margin-left: 10px;
+
     }
     
     .btn-get-started {
-        background-color: #ff6b35;
+        background-color: #FF9500;
         border: none;
         border-radius: 10px;
         padding: 15px 0;
@@ -158,7 +180,7 @@ body {
     }
     
     .btn-get-started:hover {
-        background-color: #e55a2e;
+        background-color: #FF9500;
         color: white;
         transform: translateY(-1px);
     }
@@ -207,12 +229,8 @@ body {
         font-weight: 500;
     }
     
-    .support-link:hover {
-        color: #ff6b35;
-    }
     
     .see-all-btn {
-        background-color: #f8f9fa;
         border: 2px solid #dee2e6;
         border-radius: 8px;
         padding: 12px 24px;
@@ -224,7 +242,6 @@ body {
     }
     
     .see-all-btn:hover {
-        background-color: #e9ecef;
         color: #212529;
         border-color: #ced4da;
     }
@@ -266,8 +283,8 @@ body {
     .faq-icon {
         width: 24px;
         height: 24px;
-        border-radius: 25%;
-        background-color: #f7d0bc;
+        border-radius: 10%;
+        background-color: #FFF4E5;
         color: #ff6b35;
         display: flex;
         align-items: center;
@@ -292,9 +309,8 @@ body {
     }
     
     .faq-item.active .faq-icon {
-        background-color: #f7d0bc;
+        background-color: #FFF4E5;
         color: white;
-        transform: rotate(45deg);
     }
     
 .py-md-6 {
@@ -322,10 +338,10 @@ h1 {
     margin-bottom: 3rem !important;
 }
 
-.btn-warning {
-    background-color: #F59E0B;
-    border-color: #F59E0B;
-    color: #1F2937;
+.btn-war {
+    background-color: #FF9500;
+    border-color: #FF9500;
+    color: #FF9500;
     font-weight: 500;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -334,15 +350,19 @@ h1 {
     transition: all 0.2s ease-in-out;
 }
 
-.btn-warning:hover {
-    background-color: #D97706;
-    border-color: #D97706;
+.btn-war:hover {
+    border-color: #FF9500;
+    background-color: #FF9500;
+    color: black;
     transform: translateY(-1px);
 }
 
+
+
 .btn-outline-dark {
+    border-color: #ffffff;
+    background-color: #ffffff;
     color: #1F2937;
-    border-color: #1F2937;
     font-weight: 500;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -352,8 +372,9 @@ h1 {
 }
 
 .btn-outline-dark:hover {
-    background-color: #1F2937;
-    color: white;
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: black;
     transform: translateY(-1px);
 }
 
@@ -414,14 +435,9 @@ h1 {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
+
     
-    .lead.fs-2 {
-        font-size: 1.5rem !important;
-    }
+
     
     .logo-item {
         padding: 0 0.75rem;
@@ -541,5 +557,4 @@ h1 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-}
 }
